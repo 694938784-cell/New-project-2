@@ -1,0 +1,482 @@
+:root {
+  --bg: #f5f3ee;
+  --paper: #ffffff;
+  --ink: #2a2a2a;
+  --accent: #e09f3e;
+  --muted: #6b6b6b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino", "Times New Roman", serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 20% 20%, #fff6e8 0%, transparent 55%),
+    radial-gradient(circle at 80% 10%, #f2f0ff 0%, transparent 45%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.header-controls {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.edit-mode-btn {
+  background: var(--accent);
+  color: #1e1e1e;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit-mode-btn:hover {
+  background: #d48a32;
+}
+
+.edit-mode-btn.active {
+  background: #c67d2a;
+  box-shadow: 0 2px 8px rgba(224, 159, 62, 0.3);
+}
+
+.reset-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+
+.reset-btn:hover {
+  background: #d32f2f;
+}
+
+/* 编辑模式样式 */
+.edit-mode .hero {
+  position: relative;
+  border: 2px dashed var(--accent);
+  background: rgba(224, 159, 62, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.edit-mode .container {
+  position: relative;
+}
+
+.edit-mode .sidebar,
+.edit-mode .main-content {
+  position: relative;
+  border: 2px dashed var(--accent);
+  cursor: move;
+  user-select: none;
+  transition: border-color 0.2s;
+}
+
+.edit-mode .sidebar::after,
+.edit-mode .main-content::after {
+  content: "拖拽移动";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #1e1e1e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.edit-mode .sidebar::before,
+.edit-mode .main-content::before {
+  content: "↔";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: #1e1e1e;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ew-resize;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.edit-mode .sidebar:hover,
+.edit-mode .main-content:hover {
+  border-color: #d48a32;
+  box-shadow: 0 0 10px rgba(224, 159, 62, 0.3);
+}
+
+.edit-mode .hero::after {
+  content: "编辑模式 - 可以拖拽移动和调整大小的元素";
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #1e1e1e;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.edit-mode-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: #1e1e1e;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.edit-mode-notification button {
+  margin-left: 12px;
+  background: #1e1e1e;
+  color: var(--accent);
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.sidebar {
+  flex: 0 0 300px;
+  background: var(--paper);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  height: fit-content;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e6e1d9;
+  padding-bottom: 8px;
+}
+
+.sidebar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-select {
+  padding: 4px 8px;
+  border: 1px solid #d4c8b7;
+  border-radius: 4px;
+  background: var(--paper);
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.folder-tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.folder-tree .folder-tree {
+  margin-left: 20px;
+  border-left: 2px solid #e6e1d9;
+  padding-left: 8px;
+}
+
+.folder-item {
+  margin: 4px 0;
+}
+
+.folder-btn {
+  width: 100%;
+  text-align: left;
+  padding: 8px 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--ink);
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.expand-icon {
+  font-size: 10px;
+  width: 12px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.folder-btn:hover {
+  background: #f0ebe1;
+  border-color: #d4c8b7;
+}
+
+.folder-btn.active {
+  background: var(--accent);
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.folder-btn.active:hover {
+  background: #d98f2a;
+}
+
+.folder-level {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: normal;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #e6e1d9;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* 规格表格样式 */
+.specs-section {
+  margin: 24px 0;
+  padding: 20px;
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.spec-table-container h3 {
+  margin: 0 0 16px 0;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spec-table th {
+  background: var(--accent);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.spec-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+.spec-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.spec-table tr:hover {
+  background: #f5f5f5;
+}
+
+.spec-table td:first-child {
+  font-weight: 500;
+  color: var(--text);
+  width: 120px;
+}
+
+.spec-notice {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  padding: 20px;
+}
+
+.folder-path {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #d4c8b7;
+}
+
+.hero {
+  background: var(--paper);
+  padding: 28px 28px 22px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.compose {
+  margin-top: 24px;
+  background: var(--paper);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 12px;
+}
+
+.compose input,
+.compose textarea,
+#searchInput {
+  width: 100%;
+  border: 1px solid #e6e1d9;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  background: #fffdf8;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #1e1e1e;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px dashed #d4c8b7;
+  color: var(--muted);
+}
+
+.list {
+  margin-top: 24px;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#notes {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.note {
+  background: var(--paper);
+  padding: 16px 18px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.note h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.note p {
+  margin: 0;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+
+.note .meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #9a8f82;
+}
+
+@media (max-width: 720px) {
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

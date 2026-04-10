@@ -1,0 +1,1152 @@
+{
+  "data_updated": "2026-04-10",
+  "source": "Apple Official Website",
+  "iphone_specs": {
+    "iPhone 17": {
+      "screen": {
+        "size": "6.12 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A19",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual Fusion camera system",
+          "main": "48MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Camera Control", "Action mode"]
+        },
+        "front": {
+          "type": "12MP f/1.9",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 27 hours",
+        "wireless_charging": "Up to 25W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "170 grams"
+      },
+      "colors": ["Lavender", "Sage", "Mist Blue", "White", "Black"],
+      "price_starting": "$799"
+    },
+    "iPhone 17 Pro": {
+      "screen": {
+        "size": "6.27 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A19 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro Fusion camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide camera",
+          "telephoto": "12MP f/2.8 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x, 8x optical zoom",
+          "features": ["LiDAR", "Action mode", "Camera Control"]
+        },
+        "front": {
+          "type": "12MP f/1.9",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 33 hours",
+        "wireless_charging": "Up to 25W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "195 grams"
+      },
+      "colors": ["Cosmic Orange", "Deep Blue", "Silver", "Black"],
+      "price_starting": "$1099"
+    },
+    "iPhone 17 Pro Max": {
+      "screen": {
+        "size": "6.85 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A19 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro Fusion camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide camera",
+          "telephoto": "12MP f/2.8 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x, 8x optical zoom",
+          "features": ["LiDAR", "Action mode", "Camera Control"]
+        },
+        "front": {
+          "type": "12MP f/1.9",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 39 hours",
+        "wireless_charging": "Up to 25W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "221 grams"
+      },
+      "colors": ["Cosmic Orange", "Deep Blue", "Silver", "Black"],
+      "price_starting": "$1199"
+    },
+    "iPhone 17e": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Liquid Retina",
+        "technology": "OLED",
+        "always_on": false,
+        "dynamic_island": false
+      },
+      "processor": {
+        "chip": "Apple A19",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Accelerators"]
+      },
+      "storage": ["256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Fusion camera system",
+          "main": "48MP main camera",
+          "ultra_wide": "12MP ultra-wide",
+          "zoom": "1x, 2x optical zoom"
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Tap to zoom"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 26 hours",
+        "wireless_charging": "Standard"
+      },
+      "design": {
+        "material": "Aluminum frame",
+        "features": ["Action button"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "144 grams"
+      },
+      "colors": ["Soft Pink", "White", "Black"],
+      "price_starting": "$599"
+    },
+    "iPhone Air": {
+      "screen": {
+        "size": "6.55 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A19 Pro",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Fusion camera system",
+          "main": "48MP f/1.9 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "1x, 2x optical zoom",
+          "features": ["2-in-1 lens", "LiDAR"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 27 hours",
+        "wireless_charging": "Up to 20W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "170 grams"
+      },
+      "colors": ["Sky Blue", "Light Gold", "Cloud White", "Space Black"],
+      "price_starting": "$999"
+    },
+    "iPhone 16": {
+      "screen": {
+        "size": "6.12 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A18",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Accelerators"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Advanced dual-camera system",
+          "main": "48MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Camera Control", "Action mode", "Audio Mix"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 27 hours",
+        "wireless_charging": "Up to 25W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "170 grams"
+      },
+      "colors": ["Ultramarine", "Teal", "Pink", "White", "Black"],
+      "price_starting": "$799"
+    },
+    "iPhone 16 Pro": {
+      "screen": {
+        "size": "6.27 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A18 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "48MP f/2.2 ultra-wide",
+          "telephoto": "12MP f/2.8 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x, 8x optical zoom",
+          "features": ["LiDAR", "Action mode", "Camera Control"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 33 hours",
+        "wireless_charging": "Up to 27W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "199 grams"
+      },
+      "colors": ["Desert Titanium", "Natural Titanium", "White Titanium", "Black Titanium"],
+      "price_starting": "$999"
+    },
+    "iPhone 16 Pro Max": {
+      "screen": {
+        "size": "6.85 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A18 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Accelerators", "Hardware-accelerated ray tracing"]
+      },
+      "storage": ["256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "48MP f/2.2 ultra-wide",
+          "telephoto": "12MP f/2.8 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x, 8x optical zoom",
+          "features": ["LiDAR", "Action mode", "Camera Control"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 39 hours",
+        "wireless_charging": "Up to 27W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Camera Control"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "221 grams"
+      },
+      "colors": ["Desert Titanium", "Natural Titanium", "White Titanium", "Black Titanium"],
+      "price_starting": "$1199"
+    },
+    "iPhone 15": {
+      "screen": {
+        "size": "6.12 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A17 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "48MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Smart HDR 5", "Deep Fusion", "Night mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 20 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "171 grams"
+      },
+      "colors": ["Black", "Pink", "Yellow", "Blue", "Green"],
+      "price_starting": "$799"
+    },
+    "iPhone 15 Plus": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A17 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "48MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Smart HDR 5", "Deep Fusion", "Night mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 26 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "201 grams"
+      },
+      "colors": ["Black", "Pink", "Yellow", "Blue", "Green"],
+      "price_starting": "$899"
+    },
+    "iPhone 15 Pro": {
+      "screen": {
+        "size": "6.12 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": false,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A17 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 3x telephoto",
+          "zoom": "0.5x, 1x, 2x, 3x optical zoom",
+          "features": ["LiDAR", "Action mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 23 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "187 grams"
+      },
+      "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+      "price_starting": "$999"
+    },
+    "iPhone 15 Pro Max": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": false,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A17 Pro",
+        "cores": "6-core CPU",
+        "graphics": "6-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x, 5x optical zoom",
+          "features": ["LiDAR", "Action mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 29 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Titanium design",
+        "features": ["Action button", "Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "221 grams"
+      },
+      "colors": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+      "price_starting": "$1199"
+    },
+    "iPhone 14": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.5 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Cinematic mode", "Action mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 20 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "172 grams"
+      },
+      "colors": ["Blue", "Purple", "Midnight", "Starlight", "Red"],
+      "price_starting": "$699"
+    },
+    "iPhone 14 Plus": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.5 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Cinematic mode", "Action mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 26 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "203 grams"
+      },
+      "colors": ["Blue", "Purple", "Midnight", "Starlight", "Red"],
+      "price_starting": "$799"
+    },
+    "iPhone 14 Pro": {
+      "screen": {
+        "size": "6.12 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A16 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 3x telephoto",
+          "zoom": "0.5x, 1x, 2x, 3x optical zoom",
+          "features": ["LiDAR", "Action mode", "Cinematic mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 23 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "206 grams"
+      },
+      "colors": ["Deep Purple", "Gold", "Silver", "Space Black"],
+      "price_starting": "$999"
+    },
+    "iPhone 14 Pro Max": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": true,
+        "dynamic_island": true
+      },
+      "processor": {
+        "chip": "Apple A16 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "48MP f/1.78 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 3x telephoto",
+          "zoom": "0.5x, 1x, 2x, 3x optical zoom",
+          "features": ["LiDAR", "Action mode", "Cinematic mode"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 29 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Dynamic Island"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "240 grams"
+      },
+      "colors": ["Deep Purple", "Gold", "Silver", "Space Black"],
+      "price_starting": "$1099"
+    },
+    "iPhone 13": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Deep Fusion", "Smart HDR 4", "4K Dolby Vision HDR recording"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 19 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "173 grams"
+      },
+      "colors": ["Starlight", "Midnight", "Blue", "Pink", "Red", "Green"],
+      "price_starting": "$599"
+    },
+    "iPhone 13 mini": {
+      "screen": {
+        "size": "5.42 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Deep Fusion", "Smart HDR 4"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 17 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "141 grams"
+      },
+      "colors": ["Starlight", "Midnight", "Blue", "Pink", "Red", "Green"],
+      "price_starting": "$499"
+    },
+    "iPhone 13 Pro": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "12MP f/1.5 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 3x telephoto",
+          "zoom": "0.5x, 1x, 2x, 3x optical zoom",
+          "features": ["LiDAR", "Night mode", "Deep Fusion", "ProRes video", "Macro photography"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 22 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "203 grams"
+      },
+      "colors": ["Graphite", "Gold", "Silver", "Sierra Blue", "Alpine Green"],
+      "price_starting": "$899"
+    },
+    "iPhone 13 Pro Max": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "120Hz ProMotion",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A15 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "5-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB", "1TB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "12MP f/1.5 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.8 3x telephoto",
+          "zoom": "0.5x, 1x, 2x, 3x optical zoom",
+          "features": ["LiDAR", "Night mode", "Deep Fusion", "ProRes video", "Macro photography"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 28 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "238 grams"
+      },
+      "colors": ["Graphite", "Gold", "Silver", "Sierra Blue", "Alpine Green"],
+      "price_starting": "$1099"
+    },
+    "iPhone 12": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A14 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["64GB", "128GB", "256GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Deep Fusion", "Smart HDR 3", "4K Dolby Vision HDR recording"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 17 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "162 grams"
+      },
+      "colors": ["Black", "White", "Red", "Green", "Blue", "Purple"],
+      "price_starting": "$599"
+    },
+    "iPhone 12 mini": {
+      "screen": {
+        "size": "5.42 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A14 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["64GB", "128GB", "256GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "Deep Fusion", "Smart HDR 3"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 15 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "135 grams"
+      },
+      "colors": ["Black", "White", "Red", "Green", "Blue", "Purple"],
+      "price_starting": "$499"
+    },
+    "iPhone 12 Pro": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A14 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.0 4x telephoto",
+          "zoom": "0.5x, 1x, 2x, 4x optical zoom",
+          "features": ["LiDAR", "Night mode", "Deep Fusion", "ProRes video", "4K Dolby Vision HDR"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 17 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "187 grams"
+      },
+      "colors": ["Graphite", "Gold", "Silver", "Pacific Blue"],
+      "price_starting": "$799"
+    },
+    "iPhone 12 Pro Max": {
+      "screen": {
+        "size": "6.69 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A14 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["128GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Pro camera system",
+          "main": "12MP f/1.6 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.2 5x telephoto",
+          "zoom": "0.5x, 1x, 2x, 2.5x, 5x optical zoom",
+          "features": ["LiDAR", "Night mode", "Deep Fusion", "ProRes video", "4K Dolby Vision HDR"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Center Stage"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 20 hours",
+        "wireless_charging": "Up to 15W MagSafe"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (6m, 30min)",
+        "weight": "226 grams"
+      },
+      "colors": ["Graphite", "Gold", "Silver", "Pacific Blue"],
+      "price_starting": "$899"
+    },
+    "iPhone 11": {
+      "screen": {
+        "size": "6.06 inches",
+        "type": "Liquid Retina",
+        "technology": "LCD",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A13 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["64GB", "128GB", "256GB"],
+      "camera": {
+        "rear": {
+          "system": "Dual-camera system",
+          "main": "12MP f/1.8 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "4K video", "Extended dynamic range"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Slow-motion video support"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 17 hours",
+        "wireless_charging": "Up to 7.5W Qi"
+      },
+      "design": {
+        "material": "Aluminum and glass",
+        "features": ["Liquid Retina display"],
+        "water_resistance": "IP68 (2m, 30min)",
+        "weight": "194 grams"
+      },
+      "colors": ["Purple", "Yellow", "Green", "Black", "White", "Red"],
+      "price_starting": "$499"
+    },
+    "iPhone 11 Pro": {
+      "screen": {
+        "size": "5.85 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A13 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["64GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Triple-camera system",
+          "main": "12MP f/1.8 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.0 2x telephoto",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "4K video", "Extended dynamic range"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Slow-motion video support"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 18 hours",
+        "wireless_charging": "Up to 7.5W Qi"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (4m, 30min)",
+        "weight": "188 grams"
+      },
+      "colors": ["Midnight Green", "Gold", "Silver", "Space Gray"],
+      "price_starting": "$999"
+    },
+    "iPhone 11 Pro Max": {
+      "screen": {
+        "size": "6.46 inches",
+        "type": "Super Retina XDR",
+        "technology": "OLED",
+        "refresh_rate": "60Hz",
+        "always_on": false,
+        "notch": true
+      },
+      "processor": {
+        "chip": "Apple A13 Bionic",
+        "cores": "6-core CPU",
+        "graphics": "4-core GPU",
+        "features": ["Neural Engine"]
+      },
+      "storage": ["64GB", "256GB", "512GB"],
+      "camera": {
+        "rear": {
+          "system": "Triple-camera system",
+          "main": "12MP f/1.8 main camera",
+          "ultra_wide": "12MP 120° ultra-wide",
+          "telephoto": "12MP f/2.0 2x telephoto",
+          "zoom": "0.5x, 1x, 2x optical zoom",
+          "features": ["Night mode", "4K video", "Extended dynamic range"]
+        },
+        "front": {
+          "type": "12MP",
+          "features": ["Slow-motion video support"]
+        }
+      },
+      "battery": {
+        "video_playback": "Up to 20 hours",
+        "wireless_charging": "Up to 7.5W Qi"
+      },
+      "design": {
+        "material": "Surgical-grade stainless steel",
+        "features": ["Ceramic Shield"],
+        "water_resistance": "IP68 (4m, 30min)",
+        "weight": "226 grams"
+      },
+      "colors": ["Midnight Green", "Gold", "Silver", "Space Gray"],
+      "price_starting": "$1099"
+    }
+  }
+}
