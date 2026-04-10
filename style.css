@@ -18,17 +18,21 @@ body {
   background: radial-gradient(circle at 20% 20%, #fff6e8 0%, transparent 55%),
     radial-gradient(circle at 80% 10%, #f2f0ff 0%, transparent 45%),
     var(--bg);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .app {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 48px 24px 80px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 .header-controls {
-  margin-top: 16px;
+  margin-top: 8px;
   text-align: center;
 }
 
@@ -180,19 +184,20 @@ body {
 
 .container {
   display: flex;
-  gap: 24px;
-  margin-top: 24px;
+  gap: 16px;
+  flex: 1;
+  overflow: hidden;
+  padding: 16px;
 }
 
 .sidebar {
-  flex: 0 0 300px;
+  flex: 0 0 320px;
   background: var(--paper);
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: var(--shadow);
   padding: 16px;
-  height: fit-content;
-  max-height: 800px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar-header {
@@ -296,15 +301,25 @@ body {
 
 .main-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 16px;
 }
 
 /* 规格表格样式 */
 .specs-section {
-  margin: 24px 0;
-  padding: 20px;
-  background: var(--paper);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
+  margin: 0;
+  padding: 12px 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #e6e1d9;
+  overflow-y: auto;
+  max-height: 300px;
 }
 
 .spec-table-container h3 {
@@ -368,31 +383,36 @@ body {
 }
 
 .hero {
-  background: var(--paper);
-  padding: 28px 28px 22px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  background: transparent;
+  padding: 12px 0;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #e6e1d9;
+  margin-bottom: 12px;
+  flex-shrink: 0;
 }
 
 .hero h1 {
-  margin: 0 0 6px;
-  font-size: 32px;
+  margin: 0 0 2px;
+  font-size: 20px;
   letter-spacing: 0.5px;
 }
 
 .hero p {
   margin: 0;
   color: var(--muted);
+  font-size: 12px;
 }
 
 .compose {
-  margin-top: 24px;
-  background: var(--paper);
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
   display: grid;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .compose input,
@@ -430,20 +450,28 @@ button.ghost {
 }
 
 .list {
-  margin-top: 24px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e6e1d9;
+  padding-bottom: 12px;
 }
 
 #notes {
   display: grid;
-  gap: 16px;
-  margin-top: 16px;
+  gap: 12px;
+  margin-top: 12px;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .note {
