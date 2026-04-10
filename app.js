@@ -129,168 +129,69 @@ function saveSpecs(specs) {
 // 生成规格表格HTML
 function generateSpecTable(modelName) {
   const specs = loadSpecs();
-  const modelSpec = specs.iphone_specs && specs.iphone_specs[modelName];
+  // 支持中文和英文键名
+  let modelSpec = specs.iPhone规格集 && specs.iPhone规格集[modelName];
+  if (!modelSpec) {
+    modelSpec = specs.iphone_specs && specs.iphone_specs[modelName];
+  }
   
   if (!modelSpec) {
     return `<div class="spec-notice">暂无 ${modelName} 的规格数据</div>`;
   }
   
-  return `
+  let html = `
     <div class="spec-table-container">
       <h3>${modelName} 详细规格</h3>
       <table class="spec-table">
         <tbody>
-          <tr>
-            <th colspan="2">屏幕</th>
-          </tr>
-          <tr>
-            <td>尺寸</td>
-            <td>${modelSpec.screen.size}</td>
-          </tr>
-          <tr>
-            <td>类型</td>
-            <td>${modelSpec.screen.type}</td>
-          </tr>
-          <tr>
-            <td>技术</td>
-            <td>${modelSpec.screen.technology}</td>
-          </tr>
-          ${modelSpec.screen.always_on !== undefined ? `
-          <tr>
-            <td>常亮显示</td>
-            <td>${modelSpec.screen.always_on ? '支持' : '不支持'}</td>
-          </tr>
-          ` : ''}
-          ${modelSpec.screen.dynamic_island !== undefined ? `
-          <tr>
-            <td>灵动岛</td>
-            <td>${modelSpec.screen.dynamic_island ? '支持' : '不支持'}</td>
-          </tr>
-          ` : ''}
-          
-          <tr>
-            <th colspan="2">处理器</th>
-          </tr>
-          <tr>
-            <td>芯片</td>
-            <td>${modelSpec.processor.chip}</td>
-          </tr>
-          ${modelSpec.processor.cores ? `
-          <tr>
-            <td>CPU</td>
-            <td>${modelSpec.processor.cores}</td>
-          </tr>
-          ` : ''}
-          ${modelSpec.processor.graphics ? `
-          <tr>
-            <td>图形处理器</td>
-            <td>${modelSpec.processor.graphics}</td>
-          </tr>
-          ` : ''}
-          ${modelSpec.processor.features ? `
-          <tr>
-            <td>特性</td>
-            <td>${modelSpec.processor.features.join(', ')}</td>
-          </tr>
-          ` : ''}
-          
-          <tr>
-            <th colspan="2">存储容量</th>
-          </tr>
-          <tr>
-            <td>可选容量</td>
-            <td>${modelSpec.storage.join(', ')}</td>
-          </tr>
-          
-          <tr>
-            <th colspan="2">摄像头</th>
-          </tr>
-          <tr>
-            <td>后置系统</td>
-            <td>${modelSpec.camera.rear.system}</td>
-          </tr>
-          <tr>
-            <td>主摄</td>
-            <td>${modelSpec.camera.rear.main}</td>
-          </tr>
-          ${modelSpec.camera.rear.ultra_wide ? `
-          <tr>
-            <td>超广角</td>
-            <td>${modelSpec.camera.rear.ultra_wide}</td>
-          </tr>
-          ` : ''}
-          ${modelSpec.camera.rear.telephoto ? `
-          <tr>
-            <td>长焦</td>
-            <td>${modelSpec.camera.rear.telephoto}</td>
-          </tr>
-          ` : ''}
-          ${modelSpec.camera.rear.zoom ? `
-          <tr>
-            <td>变焦</td>
-            <td>${modelSpec.camera.rear.zoom}</td>
-          </tr>
-          ` : ''}
-          <tr>
-            <td>前置</td>
-            <td>${modelSpec.camera.front.type || modelSpec.camera.front}</td>
-          </tr>
-          ${modelSpec.camera.front.features ? `
-          <tr>
-            <td>前置特性</td>
-            <td>${Array.isArray(modelSpec.camera.front.features) ? modelSpec.camera.front.features.join(', ') : modelSpec.camera.front.features}</td>
-          </tr>
-          ` : ''}
-          
-          <tr>
-            <th colspan="2">电池</th>
-          </tr>
-          <tr>
-            <td>视频播放</td>
-            <td>${modelSpec.battery.video_playback}</td>
-          </tr>
-          ${modelSpec.battery.wireless_charging ? `
-          <tr>
-            <td>无线充电</td>
-            <td>${modelSpec.battery.wireless_charging}</td>
-          </tr>
-          ` : ''}
-          
-          <tr>
-            <th colspan="2">设计</th>
-          </tr>
-          <tr>
-            <td>材质</td>
-            <td>${modelSpec.design.material}</td>
-          </tr>
-          <tr>
-            <td>特性</td>
-            <td>${modelSpec.design.features.join(', ')}</td>
-          </tr>
-          <tr>
-            <td>防水等级</td>
-            <td>${modelSpec.design.water_resistance}</td>
-          </tr>
-          
-          <tr>
-            <th colspan="2">颜色</th>
-          </tr>
-          <tr>
-            <td>可选颜色</td>
-            <td>${modelSpec.colors.join(', ')}</td>
-          </tr>
-          
-          <tr>
-            <th colspan="2">价格</th>
-          </tr>
-          <tr>
-            <td>起售价</td>
-            <td>${modelSpec.price_starting}</td>
-          </tr>
+  `;
+  
+  // 定义规格分类的显示顺序
+  const categoryOrder = ['屏幕', '处理器', '存储', '相机', '电池与充电', '设计', '颜色', '起售价'];
+  
+  for (const category of categoryOrder) {
+    if (modelSpec[category]) {
+      const categoryData = modelSpec[category];
+      
+      html += `<tr><th colspan="2">${category}</th></tr>`;
+      
+      if (typeof categoryData === 'object') {
+        if (Array.isArray(categoryData)) {
+          // 如果是数组（如颜色、存储），直接显示
+          html += `<tr><td>${category}</td><td>${categoryData.join(', ')}</td></tr>`;
+        } else {
+          // 如果是对象，遍历其中的字段
+          for (const [key, value] of Object.entries(categoryData)) {
+            let displayValue = '';
+            if (typeof value === 'boolean') {
+              displayValue = value ? '支持' : '不支持';
+            } else if (Array.isArray(value)) {
+              displayValue = value.join(', ');
+            } else if (typeof value === 'object') {
+              // 嵌套对象的情况
+              displayValue = JSON.stringify(value).replace(/[{}\"]/g, '');
+            } else {
+              displayValue = value;
+            }
+            
+            if (displayValue) {
+              html += `<tr><td>${key}</td><td>${displayValue}</td></tr>`;
+            }
+          }
+        }
+      } else {
+        html += `<tr><td>${category}</td><td>${categoryData}</td></tr>`;
+      }
+    }
+  }
+  
+  html += `
         </tbody>
       </table>
     </div>
   `;
+  
+  return html;
 }
 
 function resetFolders() {
@@ -506,8 +407,12 @@ function selectFolder(folderId) {
   if (specsContainer) {
     const modelName = folder ? folder.name : "";
     const specs = loadSpecs();
-    console.log('检查型号:', modelName, '规格数据:', specs.iphone_specs ? specs.iphone_specs[modelName] : '未找到');
-    const hasSpec = specs.iphone_specs && specs.iphone_specs[modelName];
+    
+    // 支持新的中文键名和旧的英文键名
+    const specsData = specs.iPhone规格集 || specs.iphone_specs;
+    const hasSpec = specsData && specsData[modelName];
+    
+    console.log('检查型号:', modelName, '规格数据:', hasSpec ? '找到' : '未找到');
     
     if (hasSpec) {
       specsContainer.innerHTML = generateSpecTable(modelName);
@@ -682,8 +587,11 @@ function searchSpecs(query) {
   const specs = loadSpecs();
   const matchingModels = [];
   
-  if (specs.iphone_specs) {
-    for (const [modelName, modelData] of Object.entries(specs.iphone_specs)) {
+  // 支持新的中文键名和旧的英文键名
+  const specsData = specs.iPhone规格集 || specs.iphone_specs;
+  
+  if (specsData) {
+    for (const [modelName, modelData] of Object.entries(specsData)) {
       if (modelName.toLowerCase().includes(query)) {
         matchingModels.push({ modelName, modelData });
       }
@@ -700,10 +608,14 @@ function searchSpecs(query) {
 function getDisplayValue(value) {
   if (typeof value === 'string') return value;
   if (typeof value === 'object' && value !== null) {
-    // 对于对象，尝试提取主要属性
+    // 对于对象，尝试提取主要属性（支持中文和英文键名）
+    if (value.尺寸) return value.尺寸;  // 屏幕
     if (value.size) return value.size;  // 屏幕
+    if (value.芯片) return value.芯片;  // 处理器
     if (value.chip) return value.chip;  // 处理器
+    if (value.主摄) return value.主摄;  // 摄像头
     if (value.main) return value.main;  // 摄像头
+    if (value.视频播放时间) return value.视频播放时间;  // 电池
     if (value.video_playback) return value.video_playback;  // 电池
     return '';
   }
@@ -716,16 +628,17 @@ function renderSpecSearchResults(models, query) {
   models.forEach(({ modelName, modelData }) => {
     const card = document.createElement("div");
     card.className = "note spec-result";
-    const screenInfo = getDisplayValue(modelData.screen);
-    const processorInfo = getDisplayValue(modelData.processor);
-    const cameraInfo = getDisplayValue(modelData.camera);
-    const batteryInfo = getDisplayValue(modelData.battery);
+    // 支持新的中文键名和旧的英文键名
+    const screenInfo = getDisplayValue(modelData.屏幕 || modelData.screen);
+    const processorInfo = getDisplayValue(modelData.处理器 || modelData.processor);
+    const cameraInfo = getDisplayValue(modelData.相机 || modelData.camera);
+    const batteryInfo = getDisplayValue(modelData.电池与充电 || modelData.battery);
     
     card.innerHTML = `
       <h3>${modelName}</h3>
       ${screenInfo ? `<p><strong>屏幕:</strong> ${screenInfo}</p>` : ''}
       ${processorInfo ? `<p><strong>处理器:</strong> ${processorInfo}</p>` : ''}
-      ${cameraInfo ? `<p><strong>摄像头:</strong> ${cameraInfo}</p>` : ''}
+      ${cameraInfo ? `<p><strong>相机:</strong> ${cameraInfo}</p>` : ''}
       ${batteryInfo ? `<p><strong>电池:</strong> ${batteryInfo}</p>` : ''}
       <div class="meta">iPhone 规格数据</div>
     `;
@@ -1048,20 +961,25 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function initSpecs() {
   const specs = loadSpecs();
   console.log('当前specs数据:', specs);
-  if (!specs.iphone_specs || Object.keys(specs.iphone_specs).length === 0) {
+  
+  // 支持新的中文键名和旧的英文键名
+  const hasData = (specs.iPhone规格集 && Object.keys(specs.iPhone规格集).length > 0) || 
+                  (specs.iphone_specs && Object.keys(specs.iphone_specs).length > 0);
+  
+  if (!hasData) {
     try {
       console.log('尝试加载specs.json...');
       const response = await fetch('./data/specs.json');
       console.log('fetch响应状态:', response.status);
       if (response.ok) {
         const data = await response.json();
-        console.log('加载的数据keys:', Object.keys(data.iphone_specs || {}));
+        console.log('加载的数据keys:', Object.keys(data.iPhone规格集 || data.iphone_specs || {}));
         saveSpecs(data);
-        console.log('已加载并保存默认specs数据');
+        console.log('已加载并保存规格数据');
         
         // 验证数据是否正确保存
         const saved = loadSpecs();
-        console.log('验证保存的数据:', saved.iphone_specs ? Object.keys(saved.iphone_specs) : '无数据');
+        console.log('验证保存的数据:', saved.iPhone规格集 ? Object.keys(saved.iPhone规格集) : '无数据');
       } else {
         console.log('无法加载specs.json文件，响应状态:', response.status);
       }
