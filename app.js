@@ -697,23 +697,41 @@ function searchSpecs(query) {
   }
 }
 
+function getDisplayValue(value) {
+  if (typeof value === 'string') return value;
+  if (typeof value === 'object' && value !== null) {
+    // 对于对象，尝试提取主要属性
+    if (value.size) return value.size;  // 屏幕
+    if (value.chip) return value.chip;  // 处理器
+    if (value.main) return value.main;  // 摄像头
+    if (value.video_playback) return value.video_playback;  // 电池
+    return '';
+  }
+  return '';
+}
+
 function renderSpecSearchResults(models, query) {
   notesEl.innerHTML = "";
   
   models.forEach(({ modelName, modelData }) => {
     const card = document.createElement("div");
     card.className = "note spec-result";
+    const screenInfo = getDisplayValue(modelData.screen);
+    const processorInfo = getDisplayValue(modelData.processor);
+    const cameraInfo = getDisplayValue(modelData.camera);
+    const batteryInfo = getDisplayValue(modelData.battery);
+    
     card.innerHTML = `
       <h3>${modelName}</h3>
-      <p><strong>屏幕:</strong> ${modelData.screen || '未知'}</p>
-      <p><strong>处理器:</strong> ${modelData.processor || '未知'}</p>
-      <p><strong>摄像头:</strong> ${modelData.camera || '未知'}</p>
-      <p><strong>电池:</strong> ${modelData.battery || '未知'}</p>
+      ${screenInfo ? `<p><strong>屏幕:</strong> ${screenInfo}</p>` : ''}
+      ${processorInfo ? `<p><strong>处理器:</strong> ${processorInfo}</p>` : ''}
+      ${cameraInfo ? `<p><strong>摄像头:</strong> ${cameraInfo}</p>` : ''}
+      ${batteryInfo ? `<p><strong>电池:</strong> ${batteryInfo}</p>` : ''}
       <div class="meta">iPhone 规格数据</div>
     `;
     card.addEventListener("click", () => {
       // 点击时显示完整规格
-      selectFolder("specs");
+      selectFolder(modelName);
       // 这里可以添加滚动到对应型号的逻辑
     });
     notesEl.appendChild(card);
@@ -1017,6 +1035,10 @@ document.addEventListener('keydown', (e) => {
 // 页面加载时恢复布局
 loadLayout();
 
+// 页面初始化：渲染文件夹树和笔记
+renderFolderTree();
+renderNotes(loadNotes());
+
 // 等待DOM加载完成后初始化specs数据
 document.addEventListener('DOMContentLoaded', async () => {
   await initSpecs();
@@ -1024,9 +1046,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // 初始化specs数据
 async function initSpecs() {
-  // 强制重新加载specs数据进行测试
-  localStorage.removeItem(SPECS_STORAGE_KEY);
-  
   const specs = loadSpecs();
   console.log('当前specs数据:', specs);
   if (!specs.iphone_specs || Object.keys(specs.iphone_specs).length === 0) {
