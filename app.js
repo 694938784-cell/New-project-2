@@ -525,7 +525,7 @@ function formatTime(ts) {
   return date.toLocaleString();
 }
 
-function renderNotes(notes) {
+function renderNotes(notes, isSearchResult = false) {
   notesEl.innerHTML = "";
   
   // 如果不是"所有笔记"，需要过滤笔记
@@ -536,7 +536,11 @@ function renderNotes(notes) {
   }
   
   if (filteredNotes.length === 0) {
-    notesEl.innerHTML = "<div class=\"note\"><p>还没有笔记，先写一条吧。</p></div>";
+    if (isSearchResult) {
+      notesEl.innerHTML = "<div class=\"note\"><p>没有找到匹配的笔记，请尝试其他关键词。</p></div>";
+    } else {
+      notesEl.innerHTML = "<div class=\"note\"><p>还没有笔记，先写一条吧。</p></div>";
+    }
     return;
   }
 
@@ -652,18 +656,69 @@ notesEl.addEventListener("keydown", (event) => {
 
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.trim().toLowerCase();
+  if (query === "") {
+    renderNotes(loadNotes());
+    return;
+  }
+  
+  // 首先搜索笔记
   const notes = loadNotes();
-  const filtered = notes.filter((note) => {
+  const filteredNotes = notes.filter((note) => {
     return (
       note.title.toLowerCase().includes(query) ||
       note.content.toLowerCase().includes(query)
     );
   });
-  renderNotes(filtered);
+  
+  if (filteredNotes.length > 0) {
+    renderNotes(filteredNotes, true);
+  } else {
+    // 如果没有找到笔记，搜索规格数据
+    searchSpecs(query);
+  }
 });
 
-renderFolderTree();
-renderNotes(loadNotes());
+function searchSpecs(query) {
+  const specs = loadSpecs();
+  const matchingModels = [];
+  
+  if (specs.iphone_specs) {
+    for (const [modelName, modelData] of Object.entries(specs.iphone_specs)) {
+      if (modelName.toLowerCase().includes(query)) {
+        matchingModels.push({ modelName, modelData });
+      }
+    }
+  }
+  
+  if (matchingModels.length > 0) {
+    renderSpecSearchResults(matchingModels, query);
+  } else {
+    notesEl.innerHTML = "<div class=\"note\"><p>没有找到匹配的笔记或iPhone型号。</p></div>";
+  }
+}
+
+function renderSpecSearchResults(models, query) {
+  notesEl.innerHTML = "";
+  
+  models.forEach(({ modelName, modelData }) => {
+    const card = document.createElement("div");
+    card.className = "note spec-result";
+    card.innerHTML = `
+      <h3>${modelName}</h3>
+      <p><strong>屏幕:</strong> ${modelData.screen || '未知'}</p>
+      <p><strong>处理器:</strong> ${modelData.processor || '未知'}</p>
+      <p><strong>摄像头:</strong> ${modelData.camera || '未知'}</p>
+      <p><strong>电池:</strong> ${modelData.battery || '未知'}</p>
+      <div class="meta">iPhone 规格数据</div>
+    `;
+    card.addEventListener("click", () => {
+      // 点击时显示完整规格
+      selectFolder("specs");
+      // 这里可以添加滚动到对应型号的逻辑
+    });
+    notesEl.appendChild(card);
+  });
+}
 
 // 验证文件夹结构
 validateFolderStructure();

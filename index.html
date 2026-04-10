@@ -11,6 +11,10 @@
       <header class="hero">
         <h1>轻量笔记</h1>
         <p>本地离线，自动保存。双击编辑，Enter 保存。</p>
+        <!-- 搜索框 -->
+        <div class="search-bar">
+          <input id="searchInput" type="search" placeholder="搜索笔记、型号或规格…" />
+        </div>
         <div class="header-controls">
           <button id="editModeBtn" class="edit-mode-btn">✏️ 编辑界面</button>
           <button id="resetBtn" class="reset-btn">🔄 还原模板</button>
@@ -37,10 +41,6 @@
 
         <!-- 右侧笔记区 -->
         <div class="main-content">
-          <!-- 搜索框 -->
-          <div class="search-bar">
-            <input id="searchInput" type="search" placeholder="搜索笔记…" />
-          </div>
 
           <section class="compose">
             <div class="folder-path" id="currentFolder">所有笔记</div>
