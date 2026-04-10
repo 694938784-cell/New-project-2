@@ -959,12 +959,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // 初始化specs数据
 async function initSpecs() {
-  const specs = loadSpecs();
+  let specs = loadSpecs();
   console.log('当前specs数据:', specs);
   
   // 支持新的中文键名和旧的英文键名
-  const hasData = (specs.iPhone规格集 && Object.keys(specs.iPhone规格集).length > 0) || 
-                  (specs.iphone_specs && Object.keys(specs.iphone_specs).length > 0);
+  let hasData = (specs.iPhone规格集 && Object.keys(specs.iPhone规格集).length > 0) || 
+                (specs.iphone_specs && Object.keys(specs.iphone_specs).length > 0);
+  
+  // 如果有旧格式的数据（iphone_specs），清除它强制重新加载新版本
+  if (specs.iphone_specs && !specs.iPhone规格集) {
+    console.log('检测到旧格式数据，将清除缓存并重新加载新版本');
+    localStorage.removeItem(SPECS_STORAGE_KEY);
+    hasData = false;
+  }
   
   if (!hasData) {
     try {
