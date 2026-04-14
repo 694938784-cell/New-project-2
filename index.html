@@ -16,7 +16,11 @@
           <input id="searchInput" type="search" placeholder="搜索笔记、型号或规格…" />
         </div>
         <div class="header-controls">
-          <button id="editModeBtn" class="edit-mode-btn">✏️ 编辑界面</button>
+          <button id="changelogBtn" class="ghost">📋 更新日志</button>
+          <button id="darkModeBtn" class="ghost">🌙 深色模式</button>
+          <button id="composeToggleBtn" class="ghost">✏️ 新增笔记</button>
+          <button id="exportBtn" class="ghost">📤 导出</button>
+          <button id="editModeBtn" class="edit-mode-btn">🔧 编辑界面</button>
           <button id="resetBtn" class="reset-btn">🔄 还原模板</button>
         </div>
       </header>
@@ -26,31 +30,33 @@
         <aside class="sidebar">
           <div class="sidebar-header">
             <h2>目录</h2>
-            <div class="sidebar-controls">
-              <select id="sortSelect" class="sort-select">
-                <option value="name">按名称排序</option>
-                <option value="date">按日期排序</option>
-              </select>
-              <button id="validateBtn" class="ghost" title="验证目录结构">验证</button>
-              <button id="resetFoldersBtn" class="ghost" title="重置目录结构">重置</button>
-              <button id="addFolderBtn" class="ghost" title="添加自定义目录（右键自定义目录可删除）">+</button>
-            </div>
+            <div class="stats-bar" id="statsBar"></div>
+          </div>
+          <div class="sidebar-controls">
+            <button id="toggleFoldersBtn" class="ghost toggle-folders-btn">
+              <span id="toggleFoldersIcon">📂</span>
+              <span id="toggleFoldersText">展开</span>
+            </button>
+            <select id="sortSelect" class="sort-select">
+              <option value="date-desc" selected>最新在前</option>
+              <option value="date-asc">最旧在前</option>
+              <option value="name">按名称排序</option>
+            </select>
+            <button id="validateBtn" class="ghost" title="验证目录结构">验证</button>
+            <button id="resetFoldersBtn" class="ghost" title="重置目录结构">重置</button>
+            <button id="addFolderBtn" class="ghost" title="添加自定义目录（右键自定义目录可删除）">+</button>
           </div>
           <div id="folderTree" class="folder-tree"></div>
+          <div class="recent-section" id="recentContainer"></div>
+          <div class="favorites-section" id="favoritesContainer"></div>
         </aside>
 
         <!-- 右侧笔记区 -->
         <div class="main-content">
 
-          <section class="compose">
-            <div class="folder-path" id="currentFolder">所有笔记</div>
-            <input id="titleInput" type="text" placeholder="标题" />
-            <textarea id="contentInput" rows="5" placeholder="写点什么…"></textarea>
-            <div class="actions">
-              <button id="addBtn">新增笔记</button>
-              <button id="clearBtn" class="ghost">清空</button>
-            </div>
-          </section>
+          <div class="folder-path" id="currentFolder">
+            <nav class="breadcrumb" id="breadcrumb"></nav>
+          </div>
 
           <!-- 规格信息区域 -->
           <section id="specsContainer" class="specs-section" style="display: none;"></section>
@@ -65,6 +71,38 @@
       </div>
     </main>
 
-    <script src="app.js"></script>
+    <!-- 新增笔记悬浮窗 -->
+    <div id="composePanel" class="compose-panel" style="display: none;">
+      <div class="compose-panel-content">
+        <div class="compose-panel-header">
+          <h3>✏️ 新增笔记</h3>
+          <button id="composeClose" class="compose-close-btn">×</button>
+        </div>
+        <section class="compose" id="composeSection">
+          <input id="titleInput" type="text" placeholder="标题" />
+          <textarea id="contentInput" rows="5" placeholder="写点什么…"></textarea>
+          <div class="actions">
+            <button id="addBtn">保存笔记</button>
+            <button id="clearBtn" class="ghost">清空</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 更新日志面板 -->
+    <div id="changelogPanel" class="changelog-panel" style="display: none;">
+      <div class="changelog-content">
+        <div class="changelog-header">
+          <h2>📋 更新日志</h2>
+          <button id="changelogClose" class="changelog-close">×</button>
+        </div>
+        <div id="changelogContent" class="changelog-body"></div>
+      </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button id="scrollToTop" class="scroll-to-top" title="返回顶部">↑</button>
+
+    <script src="app.js?v=20260414210000"></script>
   </body>
 </html>

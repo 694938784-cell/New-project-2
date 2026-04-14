@@ -1,0 +1,30 @@
+# 依赖
+node_modules/
+
+# 环境变量（包含敏感信息）
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# 备份文件
+*.bak
+
+# AI 工具配置
+.agent/
+.codepilot-uploads/
+.mindfs/
+.planning/
+.qwen/
+~/
+
+# 图片（如需要可移除）
+images/

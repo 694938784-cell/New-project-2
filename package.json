@@ -1,0 +1,20 @@
+{
+  "name": "new-project-2",
+  "version": "1.0.0",
+  "description": "当前项目支持三种方式：",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "dependencies": {
+    "gsd-kit": "^1.0.0"
+  }
+}
