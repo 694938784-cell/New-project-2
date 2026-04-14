@@ -15,7 +15,7 @@ const VERSION_KEY = "codex_version";
 const FAVORITES_KEY = "codex_favorites";
 const RECENT_KEY = "codex_recent";
 const DARK_MODE_KEY = "codex_dark_mode";
-const CURRENT_VERSION = "20260414210000"; // 版本号，每次更新时修改
+const CURRENT_VERSION = "20260414221000"; // 版本号，每次更新时修改
 
 // 版本检测：如果版本不匹配，强制清除所有缓存
 function checkAndClearCache() {
