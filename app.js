@@ -15,7 +15,7 @@ const VERSION_KEY = "codex_version";
 const FAVORITES_KEY = "codex_favorites";
 const RECENT_KEY = "codex_recent";
 const DARK_MODE_KEY = "codex_dark_mode";
-const CURRENT_VERSION = "20260414221000"; // 版本号，每次更新时修改
+const CURRENT_VERSION = "20260415010000"; // 版本号，每次更新时修改
 
 // 版本检测：如果版本不匹配，强制清除所有缓存
 function checkAndClearCache() {
@@ -42,7 +42,19 @@ const LAYOUT_STORAGE_KEY = "codex_layout"; // 布局存储键
 
 function loadNotes() {
   const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return [];
+  if (!raw) {
+    // 初始化默认笔记数据
+    const now = Date.now();
+    const defaultNotes = [
+      { id: "note1", title: "欢迎使用轻量笔记", content: "这是一个本地离线笔记应用。\n\n功能特点：\n- 双击可编辑的文本\n- 搜索笔记、型号或规格\n- 左侧目录树支持自定义排序\n- 笔记自动保存\n- 支持深色模式\n- 支持导出为 Markdown", folderId: "all", createdAt: now, updatedAt: now },
+      { id: "note2", title: "如何使用目录树", content: "1. 点击目录名称进入对应目录\n2. 点击箭头展开/收起子目录\n3. 使用顶部的\"展开\"按钮一键展开所有目录\n4. 右键目录可添加收藏或删除自定义目录", folderId: "all", createdAt: now - 1000, updatedAt: now - 1000 },
+      { id: "note3", title: "iPhone 17 Pro 使用技巧", content: "Apple 智能功能：\n- 智能写作：帮助润色和重写文本\n- 个性化智能功能：根据你的使用习惯优化体验\n\n相机技巧：\n- 使用 4800 万像素模式拍摄高解析度照片\n- 视频支持 4K 杜比视界\n- 微距模式适合拍摄细节", folderId: "iphone17-pro", createdAt: now - 2000, updatedAt: now - 2000 },
+      { id: "note4", title: "iPad Pro M4 配置说明", content: "显示屏：\n- Ultra Retina XDR 显示屏\n-  tandem OLED 技术\n- 1000 nits 全屏亮度\n\n芯片：\n- M4 芯片\n- 9 核 CPU\n- 10 核 GPU\n- 硬件加速光线追踪", folderId: "ipad-pro-m4", createdAt: now - 3000, updatedAt: now - 3000 },
+      { id: "note5", title: "MacBook Pro 开发环境配置", content: "推荐开发工具：\n- Xcode：iOS/macOS 开发\n- VS Code：Web 开发\n- Terminal：命令行工具\n\n常用快捷键：\n- Cmd + Space：Spotlight 搜索\n- Cmd + Tab：切换应用\n- Cmd + `：切换同类型窗口", folderId: "macbook-pro-m4-14", createdAt: now - 4000, updatedAt: now - 4000 },
+    ];
+    saveNotes(defaultNotes);
+    return defaultNotes;
+  }
   try {
     return JSON.parse(raw);
   } catch {
